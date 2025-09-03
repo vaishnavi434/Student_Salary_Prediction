@@ -1,123 +1,96 @@
-# Placement Prediction using Machine Learning
+Employee Placement & Salary Prediction
+📌 Overview
 
-This project focuses on predicting student placement and salary in campus recruitment using Random Forest classifiers. The goal is to help students and educational institutions understand the factors that influence placement success and expected salary.
+This project is about predicting whether a student/employee will get placed and estimating their possible salary using Machine Learning. The idea behind this project is to explore how data analysis and predictive models can support HR decisions and help organizations understand placement and salary trends.
 
-## Final Result
-<img src="static/images/pl1.png" alt="Alt text" width=100%>
-<img src="static/images/pl2.png" alt="Alt text" width=100%>
-<img src="static/images/pl3.png" alt="Alt text" width=100%>
+📊 Dataset
 
-## Table of Contents
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Data Preprocessing](#data-preprocessing)
-- [Model Training](#model-training)
-- [Evaluation](#evaluation)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+The dataset contains information such as:
 
-## Overview
+Education qualification
 
-Campus placement is a crucial event for students and educational institutions. Predicting placement outcomes and potential salaries can help students prepare better and institutions improve their placement strategies. This project uses Random Forest classifiers to predict both placement probability and expected salary based on various student features.
+Test scores
 
-## Dataset
+Work experience
 
-The dataset used in this project includes student information such as:
-- Academic performance (CGPA)
-- Skills
-- Weather the Candidate has done Intership
-- Weather the Candidate has Participated in hackathons
-- Other relevant features
+Salary details (for those already placed)
 
-The dataset contains features for predicting both placement status and salary.
+I worked on cleaning the dataset, handling missing values, and preparing it for machine learning models.
 
-## Installation
+🔎 Approach
 
-To run this project locally, follow these steps:
+Data Preprocessing
 
-1. Clone the repository:
-   git clone https://github.com/charans2702/Placement_Prediction_Using_Machine-Learning.git
-   
-2. Install the required packages:
-   pip install -r requirements.txt
+Removed missing or irrelevant values.
 
-## Project Structure
+Encoded categorical data into numerical format.
 
-- `static/`: Contains images and css files
-- `templates/`: Contains HTML files
-- `app.py`: Main Flask App
-- `model.pkl`: Pickle file of predicting placement model
-- `model1.pkl`: Pickle file of Salary Prediction model
-- `Placement_prediction_data.csv`: Placement Prediction data
-- `Placement_prediction.py`: Model for Placement Prediction
-- `preprocessing.ipynb`: Jupyter Notebook for Data preprocessing
-- `requirements.txt`: List of required Python packages
-- `salary_prediction_data.csv`: Salary prediction data
-- `salary_prediction.py`: Model for salary prediction
-- `README.md`: Project documentation
+Scaled features for better model performance.
 
-## Data Preprocessing
+Model Building
 
-The data preprocessing steps include:
-1. Handling missing values
-2. Encoding categorical variables
-3. Feature scaling
-4. Feature selection
+Used algorithms like Linear Regression and Decision Trees.
 
-## Model Training
+Trained models using placement and salary data.
 
-Two Random Forest classifiers are trained:
-1. Placement Prediction Model: Predicts whether a student will be placed
-2. Salary Prediction Model: Predicts the salary for placed students
+Model Evaluation
 
-The training process involves:
-1. Splitting the data into training and testing sets
-2. Initializing the Random Forest classifiers
-3. Training the models on the training set
-4. Fine-tuning hyperparameters using techniques like Grid Search or Random Search
+Checked performance using metrics such as Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R² Score.
 
-## Evaluation
+🛠️ Technologies Used
 
-The models' performance is evaluated using various metrics, including:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
-- Roc_Auc_Score
+Python
 
-## Results
+Pandas, NumPy
 
-### Placement Prediction Model
-- Accuracy: 88.7%
-- Precision: 0.93
-- Recall: 0.86
-- F1 Score: 0.90
-- Roc_Auc_Score:0.94
+Scikit-learn
 
-**CONFUSION MATRIX**:
+Matplotlib, Seaborn
 
-<img src="static/images/confusion_matrix.png " alt="Alt text" width="400" height="400">
+Jupyter Notebook
 
-**ROC CURVE**:
+▶️ How to Run
 
-<img src="static/images/roc_curve.png " alt="Alt text" width="500" height="400">
+Clone this repository:
 
-**FEATURE IMPORTANCE**:
+git clone https://github.com/your-username/placement-salary-prediction.git
 
-<img src="static/images/feature_importance.png " alt="Alt text">
 
-## Flask App
+Install the required libraries:
 
-The trained models are deployed using a Flask web application. The app allows users to input student details and receive predictions for placement probability and expected salary.
+pip install -r requirements.txt
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue.
+Run the Python script:
 
-## License
+python placement_model.py
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+Or open the Jupyter notebook:
+
+jupyter notebook data_cleaning.ipynb
+
+📈 Results
+
+The model successfully predicts whether a student/employee will get placed.
+
+It also estimates the expected salary based on education and experience.
+
+Example:
+Input → Education: Masters, Experience: 3 years
+Output → Predicted Salary: ₹6,50,000
+
+✅ Conclusion
+
+Through this project, I gained hands-on experience in:
+
+Data preprocessing and feature engineering
+
+Building and testing machine learning models
+
+Visualizing datasets to understand trends
+
+Applying ML in real-world HR and placement scenarios
+
+This project helped me understand how machine learning can support decision-making in hiring and employee management.
+
