@@ -5,3 +5,4 @@ Pickle
 Numpy
 matplotlib
 Seaborn
+jupyter
